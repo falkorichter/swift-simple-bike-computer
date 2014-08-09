@@ -28,7 +28,8 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     func centralManagerDidUpdateState(central: CBCentralManager!){
         switch (central.state){
         case .PoweredOn:
-                central.scanForPeripheralsWithServices(nil, options: nil)
+            let services = [CSC_SERVICE]
+                central.scanForPeripheralsWithServices(services, options: nil)
         default:
             println("not powered on")
         }
@@ -36,7 +37,9 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         
-        println("didDiscoverPeripheral \(peripheral)")
+        println("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
+        
+        let advertisementData = advertisementData["kCBAdvDataManufacturerData"]
         if let current = currentPeripheral  {           //can we do this prettier?
             println("we´re allready connected to \(current)")
         }
@@ -50,19 +53,37 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         println("didConnectPeripheral " + peripheral.name)
         
         peripheral.delegate = self
-        // NOTE you might only discover/Users/falkorichter/Documents/workspaces/sensorberg/_wwdc/Simple Bike Computer/Simple Bike Computer.xcodeproj RSC service, but on this example we discover all services
         
         peripheral.discoverServices(nil)
     }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
         if(!error) {
+            var found = false
             for service in peripheral.services {
                 if service.UUID == CSC_SERVICE {
+                    found = true
                     peripheral.discoverCharacteristics(nil, forService: service as CBService)
                 }
             }
+            if !found {
+                central?.cancelPeripheralConnection(peripheral)
+            }
         }
+    }
+    
+    func centralManager(central: CBCentralManager!, didRetrieveConnectedPeripherals peripherals: [AnyObject]!){
+       println("didRetrieveConnectedPeripherals peripherals:\(peripherals)")
+    }
+    
+    func centralManager(central: CBCentralManager!, didFailToConnectPeripheral peripheral: CBPeripheral!, error: NSError!){
+        println("didFailToConnectPeripheral \(peripheral) error:\(error)")
+        self.currentPeripheral = nil
+    }
+    
+    func centralManager(central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: NSError!){
+        println("didDisconnectPeripheral \(peripheral) error:\(error)")
+        self.currentPeripheral = nil
     }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
@@ -77,14 +98,58 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         }
     }
     
+    var lastCrankTime : Double?
+    var lastWheelTime : Double?
+    var lastCrankCount : UInt16?
+    
+    let startTime = NSDate()
+    
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
         
-        println("did update value" + characteristic.value().hexPresentation())
-        
         if(!error && characteristic.UUID == CSC_MEASUREMENT){
-            let bytes = characteristic.value
+            
             let measurement = characteristic.value().bikeCandenceMeasurement()
             println("cumulativeWheelRevolutions \(measurement.cumulativeWheelRevolutions) cumulativeCrankRevolutions \(measurement.cumulativeCrankRevolutions) lastCrankEventTime \(measurement.lastCrankEventTime) lastWheelEventTime \(measurement.lastWheelEventTime)")
+            
+            var numberOfCrankRevolutions: Int?
+            
+            if let crankCount = lastCrankCount {
+                numberOfCrankRevolutions = measurement.cumulativeCrankRevolutions - crankCount
+                println("numberOfCrankRevolutions: \(numberOfCrankRevolutions)")
+            }
+
+            let timeSinceStart = NSDate().timeIntervalSinceDate(startTime)
+            print("time since start: \(timeSinceStart)")
+
+            
+            if lastCrankTime != measurement.lastCrankEventTime {
+                
+                let timeDiffToCrankTime = measurement.lastCrankEventTime
+                print(" crank diff to start: \(timeDiffToCrankTime)")
+
+                
+                if let last = lastCrankTime{
+                    var timeDiff = measurement.lastCrankEventTime - last
+                    if numberOfCrankRevolutions > 0 {
+                        timeDiff = timeDiff / Double(numberOfCrankRevolutions!)
+                    }
+                    
+                    print(" timediff crank :\(timeDiff)")
+                }
+                lastCrankTime = measurement.lastCrankEventTime
+            }
+            print("\n")
+            
+            if lastWheelTime != measurement.lastWheelEventTime {
+                if let lastWheel = lastWheelTime{
+                    let timeDiff = measurement.lastWheelEventTime - lastWheel
+                    println("timediff wheel :\(timeDiff)")
+                }
+                lastWheelTime = measurement.lastWheelEventTime
+            }
+            
+            lastCrankCount = measurement.cumulativeCrankRevolutions
+            
         }
     }
 }
