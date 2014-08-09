@@ -9,18 +9,24 @@
 import Foundation
 import CoreBluetooth
 
+protocol CadenceDelegate{
+    func distanceDidChange(cadence: CadenceConnector!, totalDistance : Double! )
+}
+
 class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegate {
     
     let CSC_SERVICE = CBUUID.UUIDWithString("1816")
     let CSC_MEASUREMENT  = CBUUID.UUIDWithString("2A5B")
     
-    var wheel_size_ : Double
+    var wheel_size : Double
     
     var central : CBCentralManager?
     var currentPeripheral : CBPeripheral?
     
+    var delegate : CadenceDelegate?
+    
     override init(){
-        wheel_size_ = 2000; // default 2000 mm wheel size
+        wheel_size = 2.2; // default 2000 mm wheel size
         super.init()
         central = CBCentralManager(delegate: self, queue: nil)
     }
@@ -39,7 +45,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         
         println("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
         
-        let advertisementData = advertisementData["kCBAdvDataManufacturerData"] as NSData
+        let advertisementData = advertisementData["kCBAdvDataManufacturerData"]
         if let current = currentPeripheral  {           //can we do this prettier?
             println("we´re allready connected to \(current)")
         }
@@ -116,6 +122,8 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
                 numberOfCrankRevolutions = measurement.cumulativeCrankRevolutions - crankCount
                 println("numberOfCrankRevolutions: \(numberOfCrankRevolutions)")
             }
+            
+            delegate?.distanceDidChange(self, totalDistance: wheel_size * Double(measurement.cumulativeWheelRevolutions))
             
             if lastCrankTime != measurement.lastCrankEventTime {
                 

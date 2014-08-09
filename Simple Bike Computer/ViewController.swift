@@ -9,19 +9,29 @@
 import UIKit
 import CoreBluetooth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CadenceDelegate {
     
-    var cadenceConnector : CadenceConnector?
+    var cadenceConnector = CadenceConnector()
+    
+    @IBOutlet weak var totalDistanceLabel: UILabel!
+    @IBOutlet weak var currentSpeedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        cadenceConnector = CadenceConnector()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        cadenceConnector.delegate = self;
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        cadenceConnector.delegate = nil;
+        super.viewWillDisappear(animated)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+    func distanceDidChange(cadence: CadenceConnector!, totalDistance : Double! ){
+        totalDistanceLabel.text = "\(totalDistance)"
     }
 }
 
