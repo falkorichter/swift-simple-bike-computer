@@ -39,7 +39,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         
         println("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
         
-        let advertisementData = advertisementData["kCBAdvDataManufacturerData"]
+        let advertisementData = advertisementData["kCBAdvDataManufacturerData"] as NSData
         if let current = currentPeripheral  {           //can we do this prettier?
             println("we´re allready connected to \(current)")
         }
@@ -102,7 +102,6 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     var lastWheelTime : Double?
     var lastCrankCount : UInt16?
     
-    let startTime = NSDate()
     
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
         
@@ -117,16 +116,8 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
                 numberOfCrankRevolutions = measurement.cumulativeCrankRevolutions - crankCount
                 println("numberOfCrankRevolutions: \(numberOfCrankRevolutions)")
             }
-
-            let timeSinceStart = NSDate().timeIntervalSinceDate(startTime)
-            print("time since start: \(timeSinceStart)")
-
             
             if lastCrankTime != measurement.lastCrankEventTime {
-                
-                let timeDiffToCrankTime = measurement.lastCrankEventTime
-                print(" crank diff to start: \(timeDiffToCrankTime)")
-
                 
                 if let last = lastCrankTime{
                     var timeDiff = measurement.lastCrankEventTime - last
