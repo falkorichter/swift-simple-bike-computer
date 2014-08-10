@@ -10,7 +10,12 @@ import Foundation
 import CoreBluetooth
 
 protocol CadenceDelegate{
+    
     func distanceDidChange(cadence: CadenceConnector!, totalDistance : Double! )
+    
+    func speedDidChange(cadence: CadenceConnector!, speed : Double! )
+    
+    func crankFrequencyDidChange(cadence: CadenceConnector!, crankRevolutionsPerMinute : Double! )
 }
 
 class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegate {
@@ -107,13 +112,15 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     var lastCrankTime : Double?
     var lastWheelTime : Double?
     var lastCrankCount : UInt16?
+    var lastWheelCount : UInt32?
+    
     
     
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
         
         if(!error && characteristic.UUID == CSC_MEASUREMENT){
             
-            let measurement = characteristic.value().bikeCandenceMeasurement()
+            let measurement = characteristic.value.bikeCandenceMeasurement()
             println("cumulativeWheelRevolutions \(measurement.cumulativeWheelRevolutions) cumulativeCrankRevolutions \(measurement.cumulativeCrankRevolutions) lastCrankEventTime \(measurement.lastCrankEventTime) lastWheelEventTime \(measurement.lastWheelEventTime)")
             
             var numberOfCrankRevolutions: Int?
@@ -122,6 +129,13 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
                 numberOfCrankRevolutions = measurement.cumulativeCrankRevolutions - crankCount
                 println("numberOfCrankRevolutions: \(numberOfCrankRevolutions)")
             }
+            
+            var numberOfWheelRevolutions: Int?
+            
+            if let wheelRevolutions = lastWheelCount {
+                numberOfWheelRevolutions = measurement.cumulativeWheelRevolutions - wheelRevolutions
+            }
+
             
             delegate?.distanceDidChange(self, totalDistance: wheel_size * Double(measurement.cumulativeWheelRevolutions))
             
@@ -133,6 +147,11 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
                         timeDiff = timeDiff / Double(numberOfCrankRevolutions!)
                     }
                     
+                    let crankRevPerSecond = 1 / timeDiff
+                    let crankRevPerMinute = 60 * crankRevPerSecond
+                    
+                    self.delegate?.crankFrequencyDidChange(self, crankRevolutionsPerMinute: crankRevPerMinute)
+                    
                     print(" timediff crank :\(timeDiff)")
                 }
                 lastCrankTime = measurement.lastCrankEventTime
@@ -141,13 +160,24 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
             
             if lastWheelTime != measurement.lastWheelEventTime {
                 if let lastWheel = lastWheelTime{
-                    let timeDiff = measurement.lastWheelEventTime - lastWheel
+                    var timeDiff = measurement.lastWheelEventTime - lastWheel
+                    
+                    if(numberOfWheelRevolutions > 0){
+                        timeDiff = timeDiff / Double(numberOfWheelRevolutions!)
+                    }
+                    
                     println("timediff wheel :\(timeDiff)")
+                    
+                    let speedInMetersPerSecond = wheel_size / timeDiff
+                    let speedInKilometersPerHour = speedInMetersPerSecond * 3.6
+                    
+                    delegate?.speedDidChange(self, speed: speedInKilometersPerHour)
                 }
                 lastWheelTime = measurement.lastWheelEventTime
             }
             
             lastCrankCount = measurement.cumulativeCrankRevolutions
+            lastWheelCount = measurement.cumulativeWheelRevolutions
             
         }
     }

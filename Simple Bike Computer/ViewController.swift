@@ -15,6 +15,8 @@ class ViewController: UIViewController, CadenceDelegate {
     
     @IBOutlet weak var totalDistanceLabel: UILabel!
     @IBOutlet weak var currentSpeedLabel: UILabel!
+    @IBOutlet weak var crankRevolutionsPerMinuteLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +33,24 @@ class ViewController: UIViewController, CadenceDelegate {
     }
 
     func distanceDidChange(cadence: CadenceConnector!, totalDistance : Double! ){
-        totalDistanceLabel.text = "\(totalDistance)"
+        dispatch_async(dispatch_get_main_queue(), {
+            self.totalDistanceLabel.text = "\(totalDistance) m";
+        });
     }
+    
+    func speedDidChange(cadence: CadenceConnector!, speed: Double!) {
+        let speedString = NSString(format: "%.2f", speed)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.currentSpeedLabel.text = "\(speedString) km/h";
+        });
+    }
+    
+    func crankFrequencyDidChange(cadence: CadenceConnector!, crankRevolutionsPerMinute : Double! ){
+        let crankRevolutionsPerMinuteString = NSString(format: "%.2f", crankRevolutionsPerMinute)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.crankRevolutionsPerMinuteLabel.text = "\(crankRevolutionsPerMinuteString) per minute";
+        });
+    }
+
 }
 

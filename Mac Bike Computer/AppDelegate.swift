@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
     @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var totalDistanceTextField: NSTextField!
+    @IBOutlet weak var speedTextField: NSTextField!
 
     override init() {
         println("init")
@@ -30,6 +31,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
         });
     }
 
+    func speedDidChange(cadence: CadenceConnector!, speed: Double!) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.speedTextField.doubleValue = speed
+        });
+    }
+
+    
     func applicationWillTerminate(aNotification: NSNotification?) {
         // Insert code here to tear down your application
 
