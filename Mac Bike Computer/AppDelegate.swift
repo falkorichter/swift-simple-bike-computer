@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
     
     @IBOutlet weak var totalDistanceTextField: NSTextField!
     @IBOutlet weak var speedTextField: NSTextField!
+    @IBOutlet weak var crankRevolutionsTextField: NSTextField!
 
     override init() {
         println("init")
@@ -34,6 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
     func speedDidChange(cadence: CadenceConnector!, speed: Double!) {
         dispatch_async(dispatch_get_main_queue(), {
             self.speedTextField.doubleValue = speed
+        });
+    }
+    
+    func crankFrequencyDidChange(cadence: CadenceConnector!, crankRevolutionsPerMinute : Double! ){
+        dispatch_async(dispatch_get_main_queue(), {
+            self.crankRevolutionsTextField.doubleValue = crankRevolutionsPerMinute
         });
     }
 

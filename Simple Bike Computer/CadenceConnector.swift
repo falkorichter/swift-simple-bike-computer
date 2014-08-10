@@ -31,7 +31,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     var delegate : CadenceDelegate?
     
     override init(){
-        wheel_size = 2.2; // default 2200 mm wheel size
+        wheel_size = 2.17;
         super.init()
         central = CBCentralManager(delegate: self, queue: nil)
     }
