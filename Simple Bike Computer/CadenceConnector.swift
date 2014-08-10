@@ -31,7 +31,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     var delegate : CadenceDelegate?
     
     override init(){
-        wheel_size = 2.2; // default 2000 mm wheel size
+        wheel_size = 2.2; // default 2200 mm wheel size
         super.init()
         central = CBCentralManager(delegate: self, queue: nil)
     }
@@ -50,7 +50,6 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         
         println("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
         
-        let advertisementData = advertisementData["kCBAdvDataManufacturerData"]
         if let current = currentPeripheral  {           //can we do this prettier?
             println("we´re allready connected to \(current)")
         }
