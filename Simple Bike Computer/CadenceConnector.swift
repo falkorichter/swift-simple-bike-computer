@@ -68,7 +68,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
-        if(!error) {
+        if(error != nil) {
             var found = false
             for service in peripheral.services {
                 if service.UUID == CSC_SERVICE {
@@ -97,7 +97,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
-        if(!error){
+        if(error != nil){
             if service.UUID == CSC_SERVICE {
                 for characteristic in service.characteristics{
                     if (characteristic as CBCharacteristic).UUID == CSC_MEASUREMENT {
@@ -110,22 +110,20 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     
     var lastCrankTime : Double?
     var lastWheelTime : Double?
-    var lastCrankCount : UInt16?
+    var lastCrankCount : UInt16 = UInt16.max
     var lastWheelCount : UInt32?
-    
-    
     
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
         
-        if(!error && characteristic.UUID == CSC_MEASUREMENT){
+        if(error != nil && characteristic.UUID == CSC_MEASUREMENT){
             
             let measurement = characteristic.value.bikeCandenceMeasurement()
             println("cumulativeWheelRevolutions \(measurement.cumulativeWheelRevolutions) cumulativeCrankRevolutions \(measurement.cumulativeCrankRevolutions) lastCrankEventTime \(measurement.lastCrankEventTime) lastWheelEventTime \(measurement.lastWheelEventTime)")
             
             var numberOfCrankRevolutions: Int?
             
-            if let crankCount = lastCrankCount {
-                numberOfCrankRevolutions = measurement.cumulativeCrankRevolutions - crankCount
+            if lastCrankCount != UInt16.max {
+                numberOfCrankRevolutions = measurement.cumulativeCrankRevolutions - lastCrankCount
                 println("numberOfCrankRevolutions: \(numberOfCrankRevolutions)")
             }
             
