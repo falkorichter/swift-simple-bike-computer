@@ -20,8 +20,8 @@ protocol CadenceDelegate{
 
 class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegate {
     
-    let CSC_SERVICE = CBUUID.UUIDWithString("1816")
-    let CSC_MEASUREMENT  = CBUUID.UUIDWithString("2A5B")
+    let CSC_SERVICE = CBUUID(string: "1816")
+    let CSC_MEASUREMENT  = CBUUID(string: "2A5B")
     
     var wheel_size : Double
     
@@ -117,7 +117,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         
         if(error != nil && characteristic.UUID == CSC_MEASUREMENT){
             
-            let measurement = characteristic.value.bikeCandenceMeasurement()
+            let measurement = characteristic.value().bikeCandenceMeasurement()
             println("cumulativeWheelRevolutions \(measurement.cumulativeWheelRevolutions) cumulativeCrankRevolutions \(measurement.cumulativeCrankRevolutions) lastCrankEventTime \(measurement.lastCrankEventTime) lastWheelEventTime \(measurement.lastWheelEventTime)")
             
             var numberOfCrankRevolutions: Int?

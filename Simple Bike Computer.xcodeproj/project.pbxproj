@@ -7,88 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01FE47EC1995643800ACDACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE47EB1995643800ACDACF /* AppDelegate.swift */; };
-		01FE47EE1995643800ACDACF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE47ED1995643800ACDACF /* ViewController.swift */; };
-		01FE47F11995643800ACDACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FE47EF1995643800ACDACF /* Main.storyboard */; };
-		01FE47F31995643800ACDACF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FE47F21995643800ACDACF /* Images.xcassets */; };
-		01FE47FF1995643800ACDACF /* Simple_Bike_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE47FE1995643800ACDACF /* Simple_Bike_ComputerTests.swift */; };
-		01FE48091995647700ACDACF /* CadenceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE48081995647700ACDACF /* CadenceConnector.swift */; };
-		01FE48131996102000ACDACF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE48121996102000ACDACF /* main.swift */; };
-		01FE48151996102000ACDACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE48141996102000ACDACF /* AppDelegate.swift */; };
-		01FE48171996102000ACDACF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FE48161996102000ACDACF /* Images.xcassets */; };
-		01FE481A1996102000ACDACF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FE48181996102000ACDACF /* MainMenu.xib */; };
-		01FE48261996102000ACDACF /* Mac_Bike_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE48251996102000ACDACF /* Mac_Bike_ComputerTests.swift */; };
-		01FE482D1996104600ACDACF /* CadenceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE48081995647700ACDACF /* CadenceConnector.swift */; };
-		01FE482F199610B600ACDACF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FE482E199610B600ACDACF /* CoreBluetooth.framework */; };
-		01FE483219963D2D00ACDACF /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE483119963D2D00ACDACF /* NSDataExtensions.swift */; };
-		01FE48341996425000ACDACF /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE483119963D2D00ACDACF /* NSDataExtensions.swift */; };
+		01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7745719EEC28900E2CC2E /* AppDelegate.swift */; };
+		01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7745919EEC28900E2CC2E /* ViewController.swift */; };
+		01B7745D19EEC28900E2CC2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7745B19EEC28900E2CC2E /* Main.storyboard */; };
+		01B7745F19EEC28900E2CC2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7745E19EEC28900E2CC2E /* Images.xcassets */; };
+		01B7746219EEC28900E2CC2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B7746019EEC28900E2CC2E /* LaunchScreen.xib */; };
+		01B7746E19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7746D19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift */; };
+		01B7747919EEC2D800E2CC2E /* CadenceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */; };
+		01B7747A19EEC2D800E2CC2E /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */; };
+		01B7748419EFAC3100E2CC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7748319EFAC3100E2CC2E /* AppDelegate.swift */; };
+		01B7748619EFAC3100E2CC2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7748519EFAC3100E2CC2E /* Images.xcassets */; };
+		01B7748919EFAC3100E2CC2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B7748719EFAC3100E2CC2E /* MainMenu.xib */; };
+		01B7749519EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7749419EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift */; };
+		01B7749C19EFAC3D00E2CC2E /* CadenceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */; };
+		01B7749D19EFAC4100E2CC2E /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */; };
+		01B774A019EFAD4700E2CC2E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B7749E19EFACBA00E2CC2E /* CoreBluetooth.framework */; };
+		01B774A219EFADB000E2CC2E /* CBCharacteristic+value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		01FE47F91995643800ACDACF /* PBXContainerItemProxy */ = {
+		01B7746819EEC28900E2CC2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01FE47DE1995643800ACDACF /* Project object */;
+			containerPortal = 01B7744A19EEC28900E2CC2E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 01FE47E51995643800ACDACF;
+			remoteGlobalIDString = 01B7745119EEC28900E2CC2E;
 			remoteInfo = "Simple Bike Computer";
 		};
-		01FE48201996102000ACDACF /* PBXContainerItemProxy */ = {
+		01B7748F19EFAC3100E2CC2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 01FE47DE1995643800ACDACF /* Project object */;
+			containerPortal = 01B7744A19EEC28900E2CC2E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 01FE480D1996102000ACDACF;
-			remoteInfo = "Mac Bike Computer";
+			remoteGlobalIDString = 01B7747E19EFAC3000E2CC2E;
+			remoteInfo = "Mac Simple Bike Computer";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01FE47E61995643800ACDACF /* Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01FE47EA1995643800ACDACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01FE47EB1995643800ACDACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01FE47ED1995643800ACDACF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01FE47F01995643800ACDACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		01FE47F21995643800ACDACF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01FE47F81995643800ACDACF /* Simple Bike ComputerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Bike ComputerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01FE47FD1995643800ACDACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01FE47FE1995643800ACDACF /* Simple_Bike_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Bike_ComputerTests.swift; sourceTree = "<group>"; };
-		01FE48081995647700ACDACF /* CadenceConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadenceConnector.swift; sourceTree = "<group>"; };
-		01FE480E1996102000ACDACF /* Mac Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01FE48111996102000ACDACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01FE48121996102000ACDACF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		01FE48141996102000ACDACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01FE48161996102000ACDACF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01FE48191996102000ACDACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		01FE481F1996102000ACDACF /* Mac Bike ComputerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac Bike ComputerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01FE48241996102000ACDACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01FE48251996102000ACDACF /* Mac_Bike_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_Bike_ComputerTests.swift; sourceTree = "<group>"; };
-		01FE482E199610B600ACDACF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		01FE483119963D2D00ACDACF /* NSDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataExtensions.swift; sourceTree = "<group>"; };
+		01B7745219EEC28900E2CC2E /* Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B7745619EEC28900E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B7745719EEC28900E2CC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01B7745919EEC28900E2CC2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01B7745C19EEC28900E2CC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01B7745E19EEC28900E2CC2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		01B7746119EEC28900E2CC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		01B7746719EEC28900E2CC2E /* Simple Bike ComputerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Bike ComputerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B7746C19EEC28900E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B7746D19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Bike_ComputerTests.swift; sourceTree = "<group>"; };
+		01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadenceConnector.swift; path = Shared/CadenceConnector.swift; sourceTree = "<group>"; };
+		01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDataExtensions.swift; path = Shared/NSDataExtensions.swift; sourceTree = "<group>"; };
+		01B7747F19EFAC3000E2CC2E /* Mac Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B7748219EFAC3000E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B7748319EFAC3100E2CC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01B7748519EFAC3100E2CC2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		01B7748819EFAC3100E2CC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		01B7748E19EFAC3100E2CC2E /* Mac Simple Bike ComputerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac Simple Bike ComputerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B7749319EFAC3100E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01B7749419EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_Simple_Bike_ComputerTests.swift; sourceTree = "<group>"; };
+		01B7749E19EFACBA00E2CC2E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CBCharacteristic+value.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		01FE47E31995643800ACDACF /* Frameworks */ = {
+		01B7744F19EEC28900E2CC2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE47F51995643800ACDACF /* Frameworks */ = {
+		01B7746419EEC28900E2CC2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE480B1996102000ACDACF /* Frameworks */ = {
+		01B7747C19EFAC3000E2CC2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FE482F199610B600ACDACF /* CoreBluetooth.framework in Frameworks */,
+				01B774A019EFAD4700E2CC2E /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE481C1996102000ACDACF /* Frameworks */ = {
+		01B7748B19EFAC3100E2CC2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,115 +100,132 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01FE47DD1995643800ACDACF = {
+		01B7744919EEC28900E2CC2E = {
 			isa = PBXGroup;
 			children = (
-				01FE482E199610B600ACDACF /* CoreBluetooth.framework */,
-				01FE47E81995643800ACDACF /* Simple Bike Computer */,
-				01FE47FB1995643800ACDACF /* Simple Bike ComputerTests */,
-				01FE480F1996102000ACDACF /* Mac Bike Computer */,
-				01FE48221996102000ACDACF /* Mac Bike ComputerTests */,
-				01FE47E71995643800ACDACF /* Products */,
+				01B774A319EFAE9E00E2CC2E /* Shared */,
+				01B7745419EEC28900E2CC2E /* Simple Bike Computer */,
+				01B7746A19EEC28900E2CC2E /* Simple Bike ComputerTests */,
+				01B7748019EFAC3000E2CC2E /* Mac Simple Bike Computer */,
+				01B7749119EFAC3100E2CC2E /* Mac Simple Bike ComputerTests */,
+				01B7745319EEC28900E2CC2E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		01FE47E71995643800ACDACF /* Products */ = {
+		01B7745319EEC28900E2CC2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01FE47E61995643800ACDACF /* Simple Bike Computer.app */,
-				01FE47F81995643800ACDACF /* Simple Bike ComputerTests.xctest */,
-				01FE480E1996102000ACDACF /* Mac Bike Computer.app */,
-				01FE481F1996102000ACDACF /* Mac Bike ComputerTests.xctest */,
+				01B7745219EEC28900E2CC2E /* Simple Bike Computer.app */,
+				01B7746719EEC28900E2CC2E /* Simple Bike ComputerTests.xctest */,
+				01B7747F19EFAC3000E2CC2E /* Mac Simple Bike Computer.app */,
+				01B7748E19EFAC3100E2CC2E /* Mac Simple Bike ComputerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		01FE47E81995643800ACDACF /* Simple Bike Computer */ = {
+		01B7745419EEC28900E2CC2E /* Simple Bike Computer */ = {
 			isa = PBXGroup;
 			children = (
-				01FE47EB1995643800ACDACF /* AppDelegate.swift */,
-				01FE47ED1995643800ACDACF /* ViewController.swift */,
-				01FE47EF1995643800ACDACF /* Main.storyboard */,
-				01FE47F21995643800ACDACF /* Images.xcassets */,
-				01FE47E91995643800ACDACF /* Supporting Files */,
-				01FE48081995647700ACDACF /* CadenceConnector.swift */,
-				01FE483119963D2D00ACDACF /* NSDataExtensions.swift */,
+				01B7745719EEC28900E2CC2E /* AppDelegate.swift */,
+				01B7745919EEC28900E2CC2E /* ViewController.swift */,
+				01B7745B19EEC28900E2CC2E /* Main.storyboard */,
+				01B7745E19EEC28900E2CC2E /* Images.xcassets */,
+				01B7746019EEC28900E2CC2E /* LaunchScreen.xib */,
+				01B7745519EEC28900E2CC2E /* Supporting Files */,
+				01B774A419EFAEE600E2CC2E /* Extensions */,
 			);
 			path = "Simple Bike Computer";
 			sourceTree = "<group>";
 		};
-		01FE47E91995643800ACDACF /* Supporting Files */ = {
+		01B7745519EEC28900E2CC2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				01FE47EA1995643800ACDACF /* Info.plist */,
+				01B7745619EEC28900E2CC2E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		01FE47FB1995643800ACDACF /* Simple Bike ComputerTests */ = {
+		01B7746A19EEC28900E2CC2E /* Simple Bike ComputerTests */ = {
 			isa = PBXGroup;
 			children = (
-				01FE47FE1995643800ACDACF /* Simple_Bike_ComputerTests.swift */,
-				01FE47FC1995643800ACDACF /* Supporting Files */,
+				01B7746D19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift */,
+				01B7746B19EEC28900E2CC2E /* Supporting Files */,
 			);
 			path = "Simple Bike ComputerTests";
 			sourceTree = "<group>";
 		};
-		01FE47FC1995643800ACDACF /* Supporting Files */ = {
+		01B7746B19EEC28900E2CC2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				01FE47FD1995643800ACDACF /* Info.plist */,
+				01B7746C19EEC28900E2CC2E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		01FE480F1996102000ACDACF /* Mac Bike Computer */ = {
+		01B7748019EFAC3000E2CC2E /* Mac Simple Bike Computer */ = {
 			isa = PBXGroup;
 			children = (
-				01FE48141996102000ACDACF /* AppDelegate.swift */,
-				01FE48161996102000ACDACF /* Images.xcassets */,
-				01FE48181996102000ACDACF /* MainMenu.xib */,
-				01FE48101996102000ACDACF /* Supporting Files */,
+				01B7748319EFAC3100E2CC2E /* AppDelegate.swift */,
+				01B7748519EFAC3100E2CC2E /* Images.xcassets */,
+				01B7748719EFAC3100E2CC2E /* MainMenu.xib */,
+				01B7748119EFAC3000E2CC2E /* Supporting Files */,
+				01B7749E19EFACBA00E2CC2E /* CoreBluetooth.framework */,
 			);
-			path = "Mac Bike Computer";
+			path = "Mac Simple Bike Computer";
 			sourceTree = "<group>";
 		};
-		01FE48101996102000ACDACF /* Supporting Files */ = {
+		01B7748119EFAC3000E2CC2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				01FE48111996102000ACDACF /* Info.plist */,
-				01FE48121996102000ACDACF /* main.swift */,
+				01B7748219EFAC3000E2CC2E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		01FE48221996102000ACDACF /* Mac Bike ComputerTests */ = {
+		01B7749119EFAC3100E2CC2E /* Mac Simple Bike ComputerTests */ = {
 			isa = PBXGroup;
 			children = (
-				01FE48251996102000ACDACF /* Mac_Bike_ComputerTests.swift */,
-				01FE48231996102000ACDACF /* Supporting Files */,
+				01B7749419EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift */,
+				01B7749219EFAC3100E2CC2E /* Supporting Files */,
 			);
-			path = "Mac Bike ComputerTests";
+			path = "Mac Simple Bike ComputerTests";
 			sourceTree = "<group>";
 		};
-		01FE48231996102000ACDACF /* Supporting Files */ = {
+		01B7749219EFAC3100E2CC2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				01FE48241996102000ACDACF /* Info.plist */,
+				01B7749319EFAC3100E2CC2E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01B774A319EFAE9E00E2CC2E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */,
+				01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		01B774A419EFAEE600E2CC2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01FE47E51995643800ACDACF /* Simple Bike Computer */ = {
+		01B7745119EEC28900E2CC2E /* Simple Bike Computer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01FE48021995643800ACDACF /* Build configuration list for PBXNativeTarget "Simple Bike Computer" */;
+			buildConfigurationList = 01B7747119EEC28900E2CC2E /* Build configuration list for PBXNativeTarget "Simple Bike Computer" */;
 			buildPhases = (
-				01FE47E21995643800ACDACF /* Sources */,
-				01FE47E31995643800ACDACF /* Frameworks */,
-				01FE47E41995643800ACDACF /* Resources */,
+				01B7744E19EEC28900E2CC2E /* Sources */,
+				01B7744F19EEC28900E2CC2E /* Frameworks */,
+				01B7745019EEC28900E2CC2E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -214,88 +233,89 @@
 			);
 			name = "Simple Bike Computer";
 			productName = "Simple Bike Computer";
-			productReference = 01FE47E61995643800ACDACF /* Simple Bike Computer.app */;
+			productReference = 01B7745219EEC28900E2CC2E /* Simple Bike Computer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01FE47F71995643800ACDACF /* Simple Bike ComputerTests */ = {
+		01B7746619EEC28900E2CC2E /* Simple Bike ComputerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01FE48051995643800ACDACF /* Build configuration list for PBXNativeTarget "Simple Bike ComputerTests" */;
+			buildConfigurationList = 01B7747419EEC28900E2CC2E /* Build configuration list for PBXNativeTarget "Simple Bike ComputerTests" */;
 			buildPhases = (
-				01FE47F41995643800ACDACF /* Sources */,
-				01FE47F51995643800ACDACF /* Frameworks */,
-				01FE47F61995643800ACDACF /* Resources */,
+				01B7746319EEC28900E2CC2E /* Sources */,
+				01B7746419EEC28900E2CC2E /* Frameworks */,
+				01B7746519EEC28900E2CC2E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				01FE47FA1995643800ACDACF /* PBXTargetDependency */,
+				01B7746919EEC28900E2CC2E /* PBXTargetDependency */,
 			);
 			name = "Simple Bike ComputerTests";
 			productName = "Simple Bike ComputerTests";
-			productReference = 01FE47F81995643800ACDACF /* Simple Bike ComputerTests.xctest */;
+			productReference = 01B7746719EEC28900E2CC2E /* Simple Bike ComputerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		01FE480D1996102000ACDACF /* Mac Bike Computer */ = {
+		01B7747E19EFAC3000E2CC2E /* Mac Simple Bike Computer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01FE48271996102000ACDACF /* Build configuration list for PBXNativeTarget "Mac Bike Computer" */;
+			buildConfigurationList = 01B7749619EFAC3100E2CC2E /* Build configuration list for PBXNativeTarget "Mac Simple Bike Computer" */;
 			buildPhases = (
-				01FE480A1996102000ACDACF /* Sources */,
-				01FE480B1996102000ACDACF /* Frameworks */,
-				01FE480C1996102000ACDACF /* Resources */,
+				01B7747B19EFAC3000E2CC2E /* Sources */,
+				01B7747C19EFAC3000E2CC2E /* Frameworks */,
+				01B7747D19EFAC3000E2CC2E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Mac Bike Computer";
-			productName = "Mac Bike Computer";
-			productReference = 01FE480E1996102000ACDACF /* Mac Bike Computer.app */;
+			name = "Mac Simple Bike Computer";
+			productName = "Mac Simple Bike Computer";
+			productReference = 01B7747F19EFAC3000E2CC2E /* Mac Simple Bike Computer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01FE481E1996102000ACDACF /* Mac Bike ComputerTests */ = {
+		01B7748D19EFAC3100E2CC2E /* Mac Simple Bike ComputerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01FE482A1996102000ACDACF /* Build configuration list for PBXNativeTarget "Mac Bike ComputerTests" */;
+			buildConfigurationList = 01B7749919EFAC3100E2CC2E /* Build configuration list for PBXNativeTarget "Mac Simple Bike ComputerTests" */;
 			buildPhases = (
-				01FE481B1996102000ACDACF /* Sources */,
-				01FE481C1996102000ACDACF /* Frameworks */,
-				01FE481D1996102000ACDACF /* Resources */,
+				01B7748A19EFAC3100E2CC2E /* Sources */,
+				01B7748B19EFAC3100E2CC2E /* Frameworks */,
+				01B7748C19EFAC3100E2CC2E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				01FE48211996102000ACDACF /* PBXTargetDependency */,
+				01B7749019EFAC3100E2CC2E /* PBXTargetDependency */,
 			);
-			name = "Mac Bike ComputerTests";
-			productName = "Mac Bike ComputerTests";
-			productReference = 01FE481F1996102000ACDACF /* Mac Bike ComputerTests.xctest */;
+			name = "Mac Simple Bike ComputerTests";
+			productName = "Mac Simple Bike ComputerTests";
+			productReference = 01B7748E19EFAC3100E2CC2E /* Mac Simple Bike ComputerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		01FE47DE1995643800ACDACF /* Project object */ = {
+		01B7744A19EEC28900E2CC2E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Falko Richter";
 				TargetAttributes = {
-					01FE47E51995643800ACDACF = {
-						CreatedOnToolsVersion = 6.0;
+					01B7745119EEC28900E2CC2E = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 7FF77U8NJM;
 					};
-					01FE47F71995643800ACDACF = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 01FE47E51995643800ACDACF;
+					01B7746619EEC28900E2CC2E = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 01B7745119EEC28900E2CC2E;
 					};
-					01FE480D1996102000ACDACF = {
-						CreatedOnToolsVersion = 6.0;
+					01B7747E19EFAC3000E2CC2E = {
+						CreatedOnToolsVersion = 6.1;
 					};
-					01FE481E1996102000ACDACF = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 01FE480D1996102000ACDACF;
+					01B7748D19EFAC3100E2CC2E = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 01B7747E19EFAC3000E2CC2E;
 					};
 				};
 			};
-			buildConfigurationList = 01FE47E11995643800ACDACF /* Build configuration list for PBXProject "Simple Bike Computer" */;
+			buildConfigurationList = 01B7744D19EEC28900E2CC2E /* Build configuration list for PBXProject "Simple Bike Computer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -303,46 +323,47 @@
 				en,
 				Base,
 			);
-			mainGroup = 01FE47DD1995643800ACDACF;
-			productRefGroup = 01FE47E71995643800ACDACF /* Products */;
+			mainGroup = 01B7744919EEC28900E2CC2E;
+			productRefGroup = 01B7745319EEC28900E2CC2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01FE47E51995643800ACDACF /* Simple Bike Computer */,
-				01FE47F71995643800ACDACF /* Simple Bike ComputerTests */,
-				01FE480D1996102000ACDACF /* Mac Bike Computer */,
-				01FE481E1996102000ACDACF /* Mac Bike ComputerTests */,
+				01B7745119EEC28900E2CC2E /* Simple Bike Computer */,
+				01B7746619EEC28900E2CC2E /* Simple Bike ComputerTests */,
+				01B7747E19EFAC3000E2CC2E /* Mac Simple Bike Computer */,
+				01B7748D19EFAC3100E2CC2E /* Mac Simple Bike ComputerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		01FE47E41995643800ACDACF /* Resources */ = {
+		01B7745019EEC28900E2CC2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FE47F11995643800ACDACF /* Main.storyboard in Resources */,
-				01FE47F31995643800ACDACF /* Images.xcassets in Resources */,
+				01B7745D19EEC28900E2CC2E /* Main.storyboard in Resources */,
+				01B7746219EEC28900E2CC2E /* LaunchScreen.xib in Resources */,
+				01B7745F19EEC28900E2CC2E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE47F61995643800ACDACF /* Resources */ = {
+		01B7746519EEC28900E2CC2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE480C1996102000ACDACF /* Resources */ = {
+		01B7747D19EFAC3000E2CC2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FE48171996102000ACDACF /* Images.xcassets in Resources */,
-				01FE481A1996102000ACDACF /* MainMenu.xib in Resources */,
+				01B7748619EFAC3100E2CC2E /* Images.xcassets in Resources */,
+				01B7748919EFAC3100E2CC2E /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE481D1996102000ACDACF /* Resources */ = {
+		01B7748C19EFAC3100E2CC2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,72 +373,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		01FE47E21995643800ACDACF /* Sources */ = {
+		01B7744E19EEC28900E2CC2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FE483219963D2D00ACDACF /* NSDataExtensions.swift in Sources */,
-				01FE47EE1995643800ACDACF /* ViewController.swift in Sources */,
-				01FE47EC1995643800ACDACF /* AppDelegate.swift in Sources */,
-				01FE48091995647700ACDACF /* CadenceConnector.swift in Sources */,
+				01B7747A19EEC2D800E2CC2E /* NSDataExtensions.swift in Sources */,
+				01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */,
+				01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */,
+				01B774A219EFADB000E2CC2E /* CBCharacteristic+value.swift in Sources */,
+				01B7747919EEC2D800E2CC2E /* CadenceConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE47F41995643800ACDACF /* Sources */ = {
+		01B7746319EEC28900E2CC2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FE47FF1995643800ACDACF /* Simple_Bike_ComputerTests.swift in Sources */,
+				01B7746E19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE480A1996102000ACDACF /* Sources */ = {
+		01B7747B19EFAC3000E2CC2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FE48341996425000ACDACF /* NSDataExtensions.swift in Sources */,
-				01FE48151996102000ACDACF /* AppDelegate.swift in Sources */,
-				01FE48131996102000ACDACF /* main.swift in Sources */,
-				01FE482D1996104600ACDACF /* CadenceConnector.swift in Sources */,
+				01B7748419EFAC3100E2CC2E /* AppDelegate.swift in Sources */,
+				01B7749C19EFAC3D00E2CC2E /* CadenceConnector.swift in Sources */,
+				01B7749D19EFAC4100E2CC2E /* NSDataExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01FE481B1996102000ACDACF /* Sources */ = {
+		01B7748A19EFAC3100E2CC2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FE48261996102000ACDACF /* Mac_Bike_ComputerTests.swift in Sources */,
+				01B7749519EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		01FE47FA1995643800ACDACF /* PBXTargetDependency */ = {
+		01B7746919EEC28900E2CC2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01FE47E51995643800ACDACF /* Simple Bike Computer */;
-			targetProxy = 01FE47F91995643800ACDACF /* PBXContainerItemProxy */;
+			target = 01B7745119EEC28900E2CC2E /* Simple Bike Computer */;
+			targetProxy = 01B7746819EEC28900E2CC2E /* PBXContainerItemProxy */;
 		};
-		01FE48211996102000ACDACF /* PBXTargetDependency */ = {
+		01B7749019EFAC3100E2CC2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01FE480D1996102000ACDACF /* Mac Bike Computer */;
-			targetProxy = 01FE48201996102000ACDACF /* PBXContainerItemProxy */;
+			target = 01B7747E19EFAC3000E2CC2E /* Mac Simple Bike Computer */;
+			targetProxy = 01B7748F19EFAC3100E2CC2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01FE47EF1995643800ACDACF /* Main.storyboard */ = {
+		01B7745B19EEC28900E2CC2E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				01FE47F01995643800ACDACF /* Base */,
+				01B7745C19EEC28900E2CC2E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		01FE48181996102000ACDACF /* MainMenu.xib */ = {
+		01B7746019EEC28900E2CC2E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				01FE48191996102000ACDACF /* Base */,
+				01B7746119EEC28900E2CC2E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		01B7748719EFAC3100E2CC2E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01B7748819EFAC3100E2CC2E /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -425,7 +454,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		01FE48001995643800ACDACF /* Debug */ = {
+		01B7746F19EEC28900E2CC2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -459,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -467,7 +496,7 @@
 			};
 			name = Debug;
 		};
-		01FE48011995643800ACDACF /* Release */ = {
+		01B7747019EEC28900E2CC2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -495,38 +524,38 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		01FE48031995643800ACDACF /* Debug */ = {
+		01B7747219EEC28900E2CC2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Simple Bike Computer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		01FE48041995643800ACDACF /* Release */ = {
+		01B7747319EEC28900E2CC2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Simple Bike Computer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		01FE48061995643800ACDACF /* Debug */ = {
+		01B7747519EEC28900E2CC2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,7 +574,7 @@
 			};
 			name = Debug;
 		};
-		01FE48071995643800ACDACF /* Release */ = {
+		01B7747619EEC28900E2CC2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -560,7 +589,7 @@
 			};
 			name = Release;
 		};
-		01FE48281996102000ACDACF /* Debug */ = {
+		01B7749719EFAC3100E2CC2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -570,7 +599,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Mac Bike Computer/Info.plist";
+				INFOPLIST_FILE = "Mac Simple Bike Computer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -578,14 +607,14 @@
 			};
 			name = Debug;
 		};
-		01FE48291996102000ACDACF /* Release */ = {
+		01B7749819EFAC3100E2CC2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				INFOPLIST_FILE = "Mac Bike Computer/Info.plist";
+				INFOPLIST_FILE = "Mac Simple Bike Computer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -593,7 +622,7 @@
 			};
 			name = Release;
 		};
-		01FE482B1996102000ACDACF /* Debug */ = {
+		01B7749A19EFAC3100E2CC2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -606,16 +635,16 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Mac Bike ComputerTests/Info.plist";
+				INFOPLIST_FILE = "Mac Simple Bike ComputerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Bike Computer.app/Contents/MacOS/Mac Bike Computer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Simple Bike Computer.app/Contents/MacOS/Mac Simple Bike Computer";
 			};
 			name = Debug;
 		};
-		01FE482C1996102000ACDACF /* Release */ = {
+		01B7749B19EFAC3100E2CC2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -625,64 +654,60 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Mac Bike ComputerTests/Info.plist";
+				INFOPLIST_FILE = "Mac Simple Bike ComputerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Bike Computer.app/Contents/MacOS/Mac Bike Computer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Simple Bike Computer.app/Contents/MacOS/Mac Simple Bike Computer";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01FE47E11995643800ACDACF /* Build configuration list for PBXProject "Simple Bike Computer" */ = {
+		01B7744D19EEC28900E2CC2E /* Build configuration list for PBXProject "Simple Bike Computer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01FE48001995643800ACDACF /* Debug */,
-				01FE48011995643800ACDACF /* Release */,
+				01B7746F19EEC28900E2CC2E /* Debug */,
+				01B7747019EEC28900E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01FE48021995643800ACDACF /* Build configuration list for PBXNativeTarget "Simple Bike Computer" */ = {
+		01B7747119EEC28900E2CC2E /* Build configuration list for PBXNativeTarget "Simple Bike Computer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01FE48031995643800ACDACF /* Debug */,
-				01FE48041995643800ACDACF /* Release */,
+				01B7747219EEC28900E2CC2E /* Debug */,
+				01B7747319EEC28900E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		01FE48051995643800ACDACF /* Build configuration list for PBXNativeTarget "Simple Bike ComputerTests" */ = {
+		01B7747419EEC28900E2CC2E /* Build configuration list for PBXNativeTarget "Simple Bike ComputerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01FE48061995643800ACDACF /* Debug */,
-				01FE48071995643800ACDACF /* Release */,
+				01B7747519EEC28900E2CC2E /* Debug */,
+				01B7747619EEC28900E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		01FE48271996102000ACDACF /* Build configuration list for PBXNativeTarget "Mac Bike Computer" */ = {
+		01B7749619EFAC3100E2CC2E /* Build configuration list for PBXNativeTarget "Mac Simple Bike Computer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01FE48281996102000ACDACF /* Debug */,
-				01FE48291996102000ACDACF /* Release */,
+				01B7749719EFAC3100E2CC2E /* Debug */,
+				01B7749819EFAC3100E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		01FE482A1996102000ACDACF /* Build configuration list for PBXNativeTarget "Mac Bike ComputerTests" */ = {
+		01B7749919EFAC3100E2CC2E /* Build configuration list for PBXNativeTarget "Mac Simple Bike ComputerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01FE482B1996102000ACDACF /* Debug */,
-				01FE482C1996102000ACDACF /* Release */,
+				01B7749A19EFAC3100E2CC2E /* Debug */,
+				01B7749B19EFAC3100E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 01FE47DE1995643800ACDACF /* Project object */;
+	rootObject = 01B7744A19EEC28900E2CC2E /* Project object */;
 }

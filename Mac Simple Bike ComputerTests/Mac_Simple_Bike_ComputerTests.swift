@@ -1,15 +1,15 @@
 //
-//  Mac_Bike_ComputerTests.swift
-//  Mac Bike ComputerTests
+//  Mac_Simple_Bike_ComputerTests.swift
+//  Mac Simple Bike ComputerTests
 //
-//  Created by Falko Richter on 09/08/14.
+//  Created by Falko Richter on 16/10/14.
 //  Copyright (c) 2014 Falko Richter. All rights reserved.
 //
 
 import Cocoa
 import XCTest
 
-class Mac_Bike_ComputerTests: XCTestCase {
+class Mac_Simple_Bike_ComputerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

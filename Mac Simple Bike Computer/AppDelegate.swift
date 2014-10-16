@@ -1,21 +1,22 @@
 //
 //  AppDelegate.swift
-//  Mac Bike Computer
+//  Mac Simple Bike Computer
 //
-//  Created by Falko Richter on 09/08/14.
+//  Created by Falko Richter on 16/10/14.
 //  Copyright (c) 2014 Falko Richter. All rights reserved.
 //
 
 import Cocoa
 
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
-                            
+
     @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var totalDistanceTextField: NSTextField!
     @IBOutlet weak var speedTextField: NSTextField!
     @IBOutlet weak var crankRevolutionsTextField: NSTextField!
-
+    
     override init() {
         println("init")
     }
@@ -31,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
             self.totalDistanceTextField.doubleValue = totalDistance
         });
     }
-
+    
     func speedDidChange(cadence: CadenceConnector!, speed: Double!) {
         dispatch_async(dispatch_get_main_queue(), {
             self.speedTextField.doubleValue = speed
@@ -43,12 +44,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
             self.crankRevolutionsTextField.doubleValue = crankRevolutionsPerMinute
         });
     }
-
+    
     
     func applicationWillTerminate(aNotification: NSNotification?) {
         // Insert code here to tear down your application
-
+        
     }
+    
 
 
 }

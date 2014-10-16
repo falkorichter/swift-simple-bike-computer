@@ -2,7 +2,7 @@
 //  Simple_Bike_ComputerTests.swift
 //  Simple Bike ComputerTests
 //
-//  Created by Falko Richter on 08/08/14.
+//  Created by Falko Richter on 15/10/14.
 //  Copyright (c) 2014 Falko Richter. All rights reserved.
 //
 
