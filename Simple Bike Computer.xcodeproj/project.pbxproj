@@ -23,6 +23,8 @@
 		01B7749D19EFAC4100E2CC2E /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */; };
 		01B774A019EFAD4700E2CC2E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B7749E19EFACBA00E2CC2E /* CoreBluetooth.framework */; };
 		01B774A219EFADB000E2CC2E /* CBCharacteristic+value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */; };
+		01E1BA3719FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */; };
+		01E1BA3819FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		01B7749419EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_Simple_Bike_ComputerTests.swift; sourceTree = "<group>"; };
 		01B7749E19EFACBA00E2CC2E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CBCharacteristic+value.swift"; sourceTree = "<group>"; };
+		01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBPeripheralManagerExtensions.swift; path = Shared/CBPeripheralManagerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,7 @@
 			children = (
 				01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */,
 				01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */,
+				01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -377,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E1BA3719FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */,
 				01B7747A19EEC2D800E2CC2E /* NSDataExtensions.swift in Sources */,
 				01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */,
 				01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */,
@@ -399,6 +404,7 @@
 			files = (
 				01B7748419EFAC3100E2CC2E /* AppDelegate.swift in Sources */,
 				01B7749C19EFAC3D00E2CC2E /* CadenceConnector.swift in Sources */,
+				01E1BA3819FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */,
 				01B7749D19EFAC4100E2CC2E /* NSDataExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,6 +688,7 @@
 				01B7747319EEC28900E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01B7747419EEC28900E2CC2E /* Build configuration list for PBXNativeTarget "Simple Bike ComputerTests" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +697,7 @@
 				01B7747619EEC28900E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01B7749619EFAC3100E2CC2E /* Build configuration list for PBXNativeTarget "Mac Simple Bike Computer" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +706,7 @@
 				01B7749819EFAC3100E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01B7749919EFAC3100E2CC2E /* Build configuration list for PBXNativeTarget "Mac Simple Bike ComputerTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +715,7 @@
 				01B7749B19EFAC3100E2CC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
