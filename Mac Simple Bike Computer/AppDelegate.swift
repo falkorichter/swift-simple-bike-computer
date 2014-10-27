@@ -106,12 +106,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate, CBPeriphera
         println("peripheralManagerDidStartAdvertising")
         
         
-        var arr : [UInt32] = [1,123];
+        
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+    }
+    
+    func update() {
+        var arr : [UInt32] = [1, randomInt( 0, max: 150)];
         let heartRateData = NSData(bytes: arr, length: arr.count * sizeof(UInt32))
         
         let success = peripheralManager!.updateValue(heartRateData, forCharacteristic: hearRateChracteristic, onSubscribedCentrals: nil)
-        println("updated a value \(success)")
+        println("updated a value \(success) with value \(arr[1])")
     }
+
     
     func peripheralManager(peripheral: CBPeripheralManager!, didReceiveReadRequest request: CBATTRequest!){
         println("peripheralManager:didReceiveReadRequest: \(request)")
@@ -127,6 +135,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate, CBPeriphera
     
     func peripheralManagerIsReadyToUpdateSubscribers(peripheral: CBPeripheralManager!){
         println("peripheralManagerIsReadyToUpdateSubscribers")
+    }
+    
+    func randomInt(min: UInt32, max:UInt32) -> UInt32 {
+        return min + UInt32(arc4random_uniform(UInt32(max - min + 1)))
     }
     
     
