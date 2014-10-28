@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017256C519FFCA9900FF3CB4 /* HeartBeatPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */; };
+		017256C619FFCAB200FF3CB4 /* HeartBeatPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */; };
 		01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7745719EEC28900E2CC2E /* AppDelegate.swift */; };
 		01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7745919EEC28900E2CC2E /* ViewController.swift */; };
 		01B7745D19EEC28900E2CC2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7745B19EEC28900E2CC2E /* Main.storyboard */; };
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBeatPeripheral.swift; sourceTree = "<group>"; };
 		01B7745219EEC28900E2CC2E /* Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7745619EEC28900E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B7745719EEC28900E2CC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 				01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */,
 				01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */,
 				01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */,
+				017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -385,6 +389,7 @@
 				01B7747A19EEC2D800E2CC2E /* NSDataExtensions.swift in Sources */,
 				01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */,
 				01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */,
+				017256C519FFCA9900FF3CB4 /* HeartBeatPeripheral.swift in Sources */,
 				01B774A219EFADB000E2CC2E /* CBCharacteristic+value.swift in Sources */,
 				01B7747919EEC2D800E2CC2E /* CadenceConnector.swift in Sources */,
 			);
@@ -402,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				017256C619FFCAB200FF3CB4 /* HeartBeatPeripheral.swift in Sources */,
 				01B7748419EFAC3100E2CC2E /* AppDelegate.swift in Sources */,
 				01B7749C19EFAC3D00E2CC2E /* CadenceConnector.swift in Sources */,
 				01E1BA3819FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */,
