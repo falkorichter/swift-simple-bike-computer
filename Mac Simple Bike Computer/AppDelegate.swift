@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import CoreBluetooth
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
@@ -17,8 +18,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
     @IBOutlet weak var speedTextField: NSTextField!
     @IBOutlet weak var crankRevolutionsTextField: NSTextField!
     
+    var peripheralManager:CBPeripheralManager!
+    
+    
     override init() {
         println("init")
+        super.init()
     }
     
     var cadenceConnector = CadenceConnector()
@@ -51,7 +56,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
         
     }
     
-
-
+    func applicationShouldTerminateAfterLastWindowClosed(theApplication: NSApplication!) -> Bool{
+        return true;
+    }
+    
+    var heartBeatPeripheral: HeartBeatPeripheral?
+    
+    @IBAction func becomeHeartRateSensor(AnyObject){
+        heartBeatPeripheral = HeartBeatPeripheral()
+        
+        heartBeatPeripheral!.startBroadcasting();
+        
+    }
 }
 
