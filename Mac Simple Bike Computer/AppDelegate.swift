@@ -112,8 +112,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate, CBPeriphera
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
     }
     
+    var counter:UInt8 = 1
+    var prefix:UInt8 = 1
+    
     func update() {
-        var arr : [UInt32] = [1, randomInt( 0, max: 150)];
+        if (counter == 250){
+            counter = 1
+        }
+        
+        var arr : [UInt8] = [prefix, counter++];
         let heartRateData = NSData(bytes: arr, length: arr.count * sizeof(UInt32))
         
         let success = peripheralManager!.updateValue(heartRateData, forCharacteristic: hearRateChracteristic, onSubscribedCentrals: nil)
@@ -137,9 +144,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate, CBPeriphera
         println("peripheralManagerIsReadyToUpdateSubscribers")
     }
     
-    func randomInt(min: UInt32, max:UInt32) -> UInt32 {
-        return min + UInt32(arc4random_uniform(UInt32(max - min + 1)))
-    }
+    
     
     
 
