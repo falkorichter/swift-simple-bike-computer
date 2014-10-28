@@ -23,10 +23,14 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
         value: "falko".dataUsingEncoding(NSUTF8StringEncoding),
         permissions: CBAttributePermissions.Readable)
     
+    let infoService = CBMutableService(type: CBUUID(string: "180A"), primary: true)
     let heartRateService = CBMutableService(type: CBUUID(string: "180D"), primary: true)
-
     
     var peripheralManager:CBPeripheralManager!
+    
+    var counter:UInt8 = 1
+    var prefix:UInt8 = 1
+
     
     override init(){
         super.init()
@@ -34,13 +38,7 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
     }
     
     func startBroadcasting(){
-        
         heartRateService.characteristics = [hearRateChracteristic]
-        
-        
-        let infoService = CBMutableService(type: CBUUID(string: "180A"), primary: true)
-        
-        
         infoService.characteristics = [infoNameCharacteristics]
         
         peripheralManager.addService(infoService)
@@ -51,23 +49,13 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
         ]
         peripheralManager.startAdvertising(advertisementData)
     }
-    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!){
-        println("state: \(peripheral.state.asString())")
-        
-    }
-    
+   
     func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager!, error: NSError!){
         println("peripheralManagerDidStartAdvertising")
-        
-        
-        
-        
         var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
     }
     
-    var counter:UInt8 = 1
-    var prefix:UInt8 = 1
     
     func update() {
         if (counter == 250){
@@ -81,6 +69,11 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
         println("updated a value \(success) with value \(arr[1])")
     }
     
+    //just for logging
+    
+    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!){
+        println("state: \(peripheral.state.asString())")
+    }
     
     func peripheralManager(peripheral: CBPeripheralManager!, didReceiveReadRequest request: CBATTRequest!){
         println("peripheralManager:didReceiveReadRequest: \(request)")

@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBeatPeripheral.swift; sourceTree = "<group>"; };
+		017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeartBeatPeripheral.swift; path = Shared/HeartBeatPeripheral.swift; sourceTree = "<group>"; };
 		01B7745219EEC28900E2CC2E /* Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7745619EEC28900E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B7745719EEC28900E2CC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
