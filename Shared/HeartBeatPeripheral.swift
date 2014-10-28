@@ -52,8 +52,6 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
    
     func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager!, error: NSError!){
         println("peripheralManagerDidStartAdvertising")
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
     }
     
     
@@ -85,6 +83,8 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
     
     func peripheralManager(peripheral: CBPeripheralManager!, central: CBCentral!, didSubscribeToCharacteristic characteristic: CBCharacteristic!){
         println("peripheralManager:central:\(central) didSubscribeToCharacteristic:\(characteristic)")
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
     }
     
     func peripheralManagerIsReadyToUpdateSubscribers(peripheral: CBPeripheralManager!){
