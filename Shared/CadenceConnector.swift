@@ -23,15 +23,12 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     let CSC_SERVICE = CBUUID(string: "1816")
     let CSC_MEASUREMENT  = CBUUID(string: "2A5B")
     
-    var wheel_size : Double
-    
-    var central : CBCentralManager?
+    let wheel_size : Double = 2.17
+    var central : CBCentralManager!
     var currentPeripheral : CBPeripheral?
-    
     var delegate : CadenceDelegate?
     
     override init(){
-        wheel_size = 2.17;
         super.init()
         central = CBCentralManager(delegate: self, queue: nil)
     }
@@ -39,13 +36,12 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
     func centralManagerDidUpdateState(central: CBCentralManager!){
         switch (central.state){
         case .PoweredOn:
-            let services = [CSC_SERVICE]
-                central.scanForPeripheralsWithServices(services, options: nil)
+            central.scanForPeripheralsWithServices([CSC_SERVICE], options: nil)
         default:
             println("not powered on")
         }
     }
-    
+
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         
         println("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
@@ -59,25 +55,19 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         }
     }
     
+    
     func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!){
         println("didConnectPeripheral " + peripheral.name)
-        
         peripheral.delegate = self
-        
-        peripheral.discoverServices(nil)
+        peripheral.discoverServices([CSC_SERVICE])
     }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
         if(error != nil) {
-            var found = false
             for service in peripheral.services {
                 if service.UUID == CSC_SERVICE {
-                    found = true
-                    peripheral.discoverCharacteristics(nil, forService: service as CBService)
+                    peripheral.discoverCharacteristics([CSC_MEASUREMENT], forService: service as CBService)
                 }
-            }
-            if !found {
-                central?.cancelPeripheralConnection(peripheral)
             }
         }
     }
