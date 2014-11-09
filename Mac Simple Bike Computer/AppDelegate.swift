@@ -52,8 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
     
     
     func applicationWillTerminate(aNotification: NSNotification?) {
-        // Insert code here to tear down your application
-        
+        heartBeatPeripheral!.stopBroadcasting()
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(theApplication: NSApplication!) -> Bool{

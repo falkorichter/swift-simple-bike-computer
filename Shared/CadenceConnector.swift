@@ -18,50 +18,18 @@ protocol CadenceDelegate{
     func crankFrequencyDidChange(cadence: CadenceConnector!, crankRevolutionsPerMinute : Double! )
 }
 
-class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegate {
+class CadenceConnector : GernericConnector {
     
-    let CSC_SERVICE = CBUUID(string: "1816")
-    let CSC_MEASUREMENT  = CBUUID(string: "2A5B")
+    var CSC_SERVICE = CBUUID(string: "1816")
+    var CSC_MEASUREMENT  = CBUUID(string: "2A5B")
     
     let wheel_size : Double = 2.17
-    var central : CBCentralManager!
-    var currentPeripheral : CBPeripheral?
     var delegate : CadenceDelegate?
     
-    override init(){
-        super.init()
-        central = CBCentralManager(delegate: self, queue: nil)
-    }
-    
-    func centralManagerDidUpdateState(central: CBCentralManager!){
-        switch (central.state){
-        case .PoweredOn:
-            central.scanForPeripheralsWithServices([CSC_SERVICE], options: nil)
-        default:
-            println("not powered on")
-        }
+    init(){
+        super.init(services : [CSC_SERVICE])
     }
 
-    func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
-        
-        println("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
-        
-        if let current = currentPeripheral  {           //can we do this prettier?
-            println("we´re allready connected to \(current)")
-        }
-        else{
-            currentPeripheral = peripheral;
-            central.connectPeripheral(peripheral, options: nil);
-        }
-    }
-    
-    
-    func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!){
-        println("didConnectPeripheral " + peripheral.name)
-        peripheral.delegate = self
-        peripheral.discoverServices([CSC_SERVICE])
-    }
-    
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
         if(error != nil) {
             for service in peripheral.services {
@@ -72,19 +40,7 @@ class CadenceConnector : NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         }
     }
     
-    func centralManager(central: CBCentralManager!, didRetrieveConnectedPeripherals peripherals: [AnyObject]!){
-       println("didRetrieveConnectedPeripherals peripherals:\(peripherals)")
-    }
-    
-    func centralManager(central: CBCentralManager!, didFailToConnectPeripheral peripheral: CBPeripheral!, error: NSError!){
-        println("didFailToConnectPeripheral \(peripheral) error:\(error)")
-        self.currentPeripheral = nil
-    }
-    
-    func centralManager(central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: NSError!){
-        println("didDisconnectPeripheral \(peripheral) error:\(error)")
-        self.currentPeripheral = nil
-    }
+
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
         if(error != nil){

@@ -23,8 +23,13 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
         value: "falko".dataUsingEncoding(NSUTF8StringEncoding),
         permissions: CBAttributePermissions.Readable)
     
-    let infoService = CBMutableService(type: CBUUID(string: "180A"), primary: true)
-    let heartRateService = CBMutableService(type: CBUUID(string: "180D"), primary: true)
+    let infoService = CBMutableService(
+        type: CBUUID(string: "180A"),
+        primary: true)
+    
+    let heartRateService = CBMutableService(
+        type: CBUUID(string: "180D"),
+        primary: true)
     
     var peripheralManager:CBPeripheralManager!
     
@@ -35,6 +40,13 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
     override init(){
         super.init()
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+    }
+
+    func stopBroadcasting(){
+        if (peripheralManager.isAdvertising){
+            peripheralManager.stopAdvertising()
+        }
+        peripheralManager.removeAllServices()
     }
     
     func startBroadcasting(){
@@ -83,7 +95,7 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
     
     func peripheralManager(peripheral: CBPeripheralManager!, central: CBCentral!, didSubscribeToCharacteristic characteristic: CBCharacteristic!){
         println("peripheralManager:central:\(central) didSubscribeToCharacteristic:\(characteristic)")
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
     }
     
