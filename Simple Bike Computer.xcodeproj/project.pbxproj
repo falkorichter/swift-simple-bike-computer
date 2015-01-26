@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		012829B91A76AC1400BA173E /* HeartRateConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012829B81A76AC1400BA173E /* HeartRateConnector.swift */; };
-		017256C519FFCA9900FF3CB4 /* HeartBeatPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */; };
-		017256C619FFCAB200FF3CB4 /* HeartBeatPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */; };
+		017256C519FFCA9900FF3CB4 /* HeartRatePeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */; };
+		017256C619FFCAB200FF3CB4 /* HeartRatePeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */; };
 		019717E71A07839700A00864 /* SensorButtonConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019717E61A07839700A00864 /* SensorButtonConnector.swift */; };
 		019717E81A07839700A00864 /* SensorButtonConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019717E61A07839700A00864 /* SensorButtonConnector.swift */; };
 		019717EA1A07840E00A00864 /* GernericConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019717E91A07840E00A00864 /* GernericConnector.swift */; };
@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		012829B81A76AC1400BA173E /* HeartRateConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateConnector.swift; sourceTree = "<group>"; };
-		017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeartBeatPeripheral.swift; path = Shared/HeartBeatPeripheral.swift; sourceTree = "<group>"; };
+		017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeartRatePeripheral.swift; path = Shared/HeartRatePeripheral.swift; sourceTree = "<group>"; };
 		019717E61A07839700A00864 /* SensorButtonConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorButtonConnector.swift; path = Shared/SensorButtonConnector.swift; sourceTree = "<group>"; };
 		019717E91A07840E00A00864 /* GernericConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GernericConnector.swift; path = Shared/GernericConnector.swift; sourceTree = "<group>"; };
 		01B7745219EEC28900E2CC2E /* Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +220,7 @@
 				012829B81A76AC1400BA173E /* HeartRateConnector.swift */,
 				01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */,
 				01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */,
-				017256C419FFCA9900FF3CB4 /* HeartBeatPeripheral.swift */,
+				017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */,
 				019717E61A07839700A00864 /* SensorButtonConnector.swift */,
 				019717E91A07840E00A00864 /* GernericConnector.swift */,
 			);
@@ -402,7 +402,7 @@
 				01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */,
 				01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */,
 				019717EA1A07840E00A00864 /* GernericConnector.swift in Sources */,
-				017256C519FFCA9900FF3CB4 /* HeartBeatPeripheral.swift in Sources */,
+				017256C519FFCA9900FF3CB4 /* HeartRatePeripheral.swift in Sources */,
 				01B774A219EFADB000E2CC2E /* CBCharacteristic+value.swift in Sources */,
 				01B7747919EEC2D800E2CC2E /* CadenceConnector.swift in Sources */,
 				019717E71A07839700A00864 /* SensorButtonConnector.swift in Sources */,
@@ -421,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017256C619FFCAB200FF3CB4 /* HeartBeatPeripheral.swift in Sources */,
+				017256C619FFCAB200FF3CB4 /* HeartRatePeripheral.swift in Sources */,
 				01B7748419EFAC3100E2CC2E /* AppDelegate.swift in Sources */,
 				01B7749C19EFAC3D00E2CC2E /* CadenceConnector.swift in Sources */,
 				01E1BA3819FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */,

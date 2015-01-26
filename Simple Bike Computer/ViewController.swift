@@ -55,7 +55,7 @@ class ViewController: UIViewController, CadenceDelegate, HeartRateDelegate {
         });
     }
     
-    func heartRateDidChange(heartbeat: HeartRateConnector!, heartRate : UInt16! ){
+    func heartRateDidChange(heartbeat: HeartRateConnector!, heartRate : UInt8! ){
         dispatch_async(dispatch_get_main_queue(), {
             self.heartRateLabel.text = "\(heartRate) beats per minute";
         });

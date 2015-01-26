@@ -11,12 +11,13 @@ import CoreBluetooth
 
 protocol HeartRateDelegate{
     
-    func heartRateDidChange(heartbeat: HeartRateConnector!, heartRate : UInt16! )
+    func heartRateDidChange(heartbeat: HeartRateConnector!, heartRate : UInt8! )
 }
 
 class HeartRateConnector : GernericConnector {
     
-    var HEARTBEAT_SERVICE = CBUUID(string: "2A37")
+    var HEARTBEAT_SERVICE = CBUUID(string: "180D")
+    var HEARTBEAT_MEASUREMENT = CBUUID(string: "2A37")
     
     var delegate : HeartRateDelegate?
     
@@ -25,10 +26,12 @@ class HeartRateConnector : GernericConnector {
     }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
+        println("didDiscoverServices:error:\(error)")
         if(error != nil) {
             for service in peripheral.services {
                 if service.UUID == HEARTBEAT_SERVICE {
                     peripheral.discoverCharacteristics([HEARTBEAT_SERVICE], forService: service as CBService)
+                    println("discoverCharacteristics")
                 }
             }
         }
@@ -37,10 +40,11 @@ class HeartRateConnector : GernericConnector {
     
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
+        println("didDiscoverCharacteristicsForService:\(service) error:\(error)")
         if(error != nil){
             if service.UUID == HEARTBEAT_SERVICE {
                 for characteristic in service.characteristics{
-                    if (characteristic as CBCharacteristic).UUID == HEARTBEAT_SERVICE {
+                    if (characteristic as CBCharacteristic).UUID == HEARTBEAT_MEASUREMENT {
                         peripheral.setNotifyValue(true, forCharacteristic: characteristic as CBCharacteristic);
                     }
                 }
@@ -50,11 +54,11 @@ class HeartRateConnector : GernericConnector {
     
     
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
-        
-        if(error != nil && characteristic.UUID == HEARTBEAT_SERVICE){
+        println("didUpdateValueForCharacteristic:\(characteristic) error:\(error)")
+        if(error != nil && characteristic.UUID == HEARTBEAT_MEASUREMENT){
             
-            var heartRate : UInt16 = 0
-            characteristic.value().getBytes(&heartRate, range: NSMakeRange(0, 2))
+            var heartRate : UInt8 = 0
+            characteristic.value().getBytes(&heartRate, range: NSMakeRange(1, 1))
             
             
             delegate?.heartRateDidChange(self, heartRate:heartRate)

@@ -9,7 +9,7 @@
 import Foundation
 import CoreBluetooth
 
-class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
+class HeartRatePeripheral: NSObject, CBPeripheralManagerDelegate {
     
     let hearRateChracteristic = CBMutableCharacteristic(
         type: CBUUID(string: "2A37"),

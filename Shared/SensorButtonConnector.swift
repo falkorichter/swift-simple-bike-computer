@@ -9,6 +9,7 @@
 import Foundation
 import CoreBluetooth
 
+//FIXME: needs implementation
 class SensorButtonConnector: GernericConnector {
     
     let buttonServiceUUID = CBUUID(string: "FFED")
