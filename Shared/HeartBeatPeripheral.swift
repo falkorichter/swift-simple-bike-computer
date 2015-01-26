@@ -35,6 +35,8 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
     
     var counter:UInt8 = 1
     var prefix:UInt8 = 1
+    
+    var timer:NSTimer?
 
     
     override init(){
@@ -82,24 +84,30 @@ class HeartBeatPeripheral: NSObject, CBPeripheralManagerDelegate {
     //just for logging
     
     func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!){
-        println("state: \(peripheral.state.asString())")
+        println("peripheralManagerDidUpdateState: \(peripheral.state.asString())")
     }
     
     func peripheralManager(peripheral: CBPeripheralManager!, didReceiveReadRequest request: CBATTRequest!){
-        println("peripheralManager:didReceiveReadRequest: \(request)")
+        println("peripheralManager:\(peripheral) didReceiveReadRequest: \(request)")
     }
     
     func peripheralManager(peripheral: CBPeripheralManager!, didAddService service: CBService!, error: NSError!){
-        println("peripheralManager:didAddService: \(service)")
+        println("peripheralManager:\(peripheral) didAddService: \(service)")
     }
     
     func peripheralManager(peripheral: CBPeripheralManager!, central: CBCentral!, didSubscribeToCharacteristic characteristic: CBCharacteristic!){
         println("peripheralManager:central:\(central) didSubscribeToCharacteristic:\(characteristic)")
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(timer!, forMode: NSDefaultRunLoopMode)
     }
     
     func peripheralManagerIsReadyToUpdateSubscribers(peripheral: CBPeripheralManager!){
-        println("peripheralManagerIsReadyToUpdateSubscribers")
+        println("peripheralManagerIsReadyToUpdateSubscribers:\(peripheral)")
     }
+    
+    func peripheralManager(peripheral: CBPeripheralManager!, central: CBCentral!, didUnsubscribeFromCharacteristic characteristic: CBCharacteristic!){
+        println("peripheralManager:\(peripheral) central:\(central) didUnsubscribeFromCharacteristic:\(characteristic)")
+        timer!.invalidate()
+    }
+    
 }

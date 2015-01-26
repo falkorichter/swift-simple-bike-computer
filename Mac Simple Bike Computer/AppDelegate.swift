@@ -18,6 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
     @IBOutlet weak var speedTextField: NSTextField!
     @IBOutlet weak var crankRevolutionsTextField: NSTextField!
     
+    var heartBeatPeripheral: HeartBeatPeripheral?
+    
     var peripheralManager:CBPeripheralManager!
     
     
@@ -59,11 +61,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, CadenceDelegate {
         return true;
     }
     
-    var heartBeatPeripheral: HeartBeatPeripheral?
+    
     
     @IBAction func becomeHeartRateSensor(AnyObject){
-        heartBeatPeripheral = HeartBeatPeripheral()
-        
+        heartBeatPeripheral = HeartBeatPeripheral()        
         heartBeatPeripheral!.startBroadcasting();
         
     }

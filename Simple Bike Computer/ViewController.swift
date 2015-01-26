@@ -9,14 +9,15 @@
 import UIKit
 import CoreBluetooth
 
-class ViewController: UIViewController, CadenceDelegate {
+class ViewController: UIViewController, CadenceDelegate, HeartRateDelegate {
     
-    var cadenceConnector = CadenceConnector()
+//    var cadenceConnector = CadenceConnector()
+    var heartRateConnector = HeartRateConnector()
     
     @IBOutlet weak var totalDistanceLabel: UILabel!
     @IBOutlet weak var currentSpeedLabel: UILabel!
     @IBOutlet weak var crankRevolutionsPerMinuteLabel: UILabel!
-    
+    @IBOutlet weak var heartRateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,13 @@ class ViewController: UIViewController, CadenceDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        cadenceConnector.delegate = self;
+//        cadenceConnector.delegate = self;
+        heartRateConnector.delegate = self;
     }
     
     override func viewWillDisappear(animated: Bool) {
-        cadenceConnector.delegate = nil;
+//        cadenceConnector.delegate = nil;
+        heartRateConnector.delegate = self;
         super.viewWillDisappear(animated)
     }
 
@@ -51,6 +54,12 @@ class ViewController: UIViewController, CadenceDelegate {
             self.crankRevolutionsPerMinuteLabel.text = "\(crankRevolutionsPerMinuteString) per minute";
         });
     }
-
+    
+    func heartRateDidChange(heartbeat: HeartRateConnector!, heartRate : UInt16! ){
+        dispatch_async(dispatch_get_main_queue(), {
+            self.heartRateLabel.text = "\(heartRate) beats per minute";
+        });
+        println("heartRateDidChange:\(heartRate)")
+    }
 }
 

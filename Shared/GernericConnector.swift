@@ -25,6 +25,7 @@ class GernericConnector: NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         switch (central.state){
         case .PoweredOn:
             central.scanForPeripheralsWithServices(services, options: nil)
+            println("starting scan for \(services)")
         default:
             println("not powered on")
         }
