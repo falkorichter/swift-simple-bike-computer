@@ -10,26 +10,13 @@
 		012829B91A76AC1400BA173E /* HeartRateConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012829B81A76AC1400BA173E /* HeartRateConnector.swift */; };
 		017256C519FFCA9900FF3CB4 /* HeartRatePeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */; };
 		017256C619FFCAB200FF3CB4 /* HeartRatePeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */; };
-		019717E71A07839700A00864 /* SensorButtonConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019717E61A07839700A00864 /* SensorButtonConnector.swift */; };
-		019717E81A07839700A00864 /* SensorButtonConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019717E61A07839700A00864 /* SensorButtonConnector.swift */; };
 		019717EA1A07840E00A00864 /* GernericConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019717E91A07840E00A00864 /* GernericConnector.swift */; };
 		019717EB1A07840E00A00864 /* GernericConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019717E91A07840E00A00864 /* GernericConnector.swift */; };
-		01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7745719EEC28900E2CC2E /* AppDelegate.swift */; };
-		01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7745919EEC28900E2CC2E /* ViewController.swift */; };
-		01B7745D19EEC28900E2CC2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7745B19EEC28900E2CC2E /* Main.storyboard */; };
-		01B7745F19EEC28900E2CC2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7745E19EEC28900E2CC2E /* Images.xcassets */; };
-		01B7746219EEC28900E2CC2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B7746019EEC28900E2CC2E /* LaunchScreen.xib */; };
-		01B7746E19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7746D19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift */; };
-		01B7747919EEC2D800E2CC2E /* CadenceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */; };
-		01B7747A19EEC2D800E2CC2E /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */; };
 		01B7748419EFAC3100E2CC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7748319EFAC3100E2CC2E /* AppDelegate.swift */; };
 		01B7748619EFAC3100E2CC2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7748519EFAC3100E2CC2E /* Images.xcassets */; };
 		01B7748919EFAC3100E2CC2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B7748719EFAC3100E2CC2E /* MainMenu.xib */; };
 		01B7749519EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7749419EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift */; };
-		01B7749C19EFAC3D00E2CC2E /* CadenceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */; };
-		01B7749D19EFAC4100E2CC2E /* NSDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */; };
 		01B774A019EFAD4700E2CC2E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B7749E19EFACBA00E2CC2E /* CoreBluetooth.framework */; };
-		01B774A219EFADB000E2CC2E /* CBCharacteristic+value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */; };
 		01E1BA3719FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */; };
 		01E1BA3819FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -54,20 +41,9 @@
 /* Begin PBXFileReference section */
 		012829B81A76AC1400BA173E /* HeartRateConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateConnector.swift; sourceTree = "<group>"; };
 		017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeartRatePeripheral.swift; path = Shared/HeartRatePeripheral.swift; sourceTree = "<group>"; };
-		019717E61A07839700A00864 /* SensorButtonConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorButtonConnector.swift; path = Shared/SensorButtonConnector.swift; sourceTree = "<group>"; };
 		019717E91A07840E00A00864 /* GernericConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GernericConnector.swift; path = Shared/GernericConnector.swift; sourceTree = "<group>"; };
 		01B7745219EEC28900E2CC2E /* Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01B7745619EEC28900E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01B7745719EEC28900E2CC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01B7745919EEC28900E2CC2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01B7745C19EEC28900E2CC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		01B7745E19EEC28900E2CC2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01B7746119EEC28900E2CC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01B7746719EEC28900E2CC2E /* Simple Bike ComputerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Bike ComputerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01B7746C19EEC28900E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01B7746D19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Bike_ComputerTests.swift; sourceTree = "<group>"; };
-		01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadenceConnector.swift; path = Shared/CadenceConnector.swift; sourceTree = "<group>"; };
-		01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDataExtensions.swift; path = Shared/NSDataExtensions.swift; sourceTree = "<group>"; };
 		01B7747F19EFAC3000E2CC2E /* Mac Simple Bike Computer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Simple Bike Computer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7748219EFAC3000E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B7748319EFAC3100E2CC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +53,6 @@
 		01B7749319EFAC3100E2CC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B7749419EFAC3100E2CC2E /* Mac_Simple_Bike_ComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_Simple_Bike_ComputerTests.swift; sourceTree = "<group>"; };
 		01B7749E19EFACBA00E2CC2E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CBCharacteristic+value.swift"; sourceTree = "<group>"; };
 		01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBPeripheralManagerExtensions.swift; path = Shared/CBPeripheralManagerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				01B774A319EFAE9E00E2CC2E /* Shared */,
-				01B7745419EEC28900E2CC2E /* Simple Bike Computer */,
-				01B7746A19EEC28900E2CC2E /* Simple Bike ComputerTests */,
 				01B7748019EFAC3000E2CC2E /* Mac Simple Bike Computer */,
 				01B7749119EFAC3100E2CC2E /* Mac Simple Bike ComputerTests */,
 				01B7745319EEC28900E2CC2E /* Products */,
@@ -135,45 +108,6 @@
 				01B7748E19EFAC3100E2CC2E /* Mac Simple Bike ComputerTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		01B7745419EEC28900E2CC2E /* Simple Bike Computer */ = {
-			isa = PBXGroup;
-			children = (
-				01B7745719EEC28900E2CC2E /* AppDelegate.swift */,
-				01B7745919EEC28900E2CC2E /* ViewController.swift */,
-				01B7745B19EEC28900E2CC2E /* Main.storyboard */,
-				01B7745E19EEC28900E2CC2E /* Images.xcassets */,
-				01B7746019EEC28900E2CC2E /* LaunchScreen.xib */,
-				01B7745519EEC28900E2CC2E /* Supporting Files */,
-				01B774A419EFAEE600E2CC2E /* Extensions */,
-			);
-			path = "Simple Bike Computer";
-			sourceTree = "<group>";
-		};
-		01B7745519EEC28900E2CC2E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				01B7745619EEC28900E2CC2E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		01B7746A19EEC28900E2CC2E /* Simple Bike ComputerTests */ = {
-			isa = PBXGroup;
-			children = (
-				01B7746D19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift */,
-				01B7746B19EEC28900E2CC2E /* Supporting Files */,
-			);
-			path = "Simple Bike ComputerTests";
-			sourceTree = "<group>";
-		};
-		01B7746B19EEC28900E2CC2E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				01B7746C19EEC28900E2CC2E /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		01B7748019EFAC3000E2CC2E /* Mac Simple Bike Computer */ = {
@@ -216,23 +150,12 @@
 		01B774A319EFAE9E00E2CC2E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				01B7747719EEC2D800E2CC2E /* CadenceConnector.swift */,
 				012829B81A76AC1400BA173E /* HeartRateConnector.swift */,
-				01B7747819EEC2D800E2CC2E /* NSDataExtensions.swift */,
 				01E1BA3619FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift */,
 				017256C419FFCA9900FF3CB4 /* HeartRatePeripheral.swift */,
-				019717E61A07839700A00864 /* SensorButtonConnector.swift */,
 				019717E91A07840E00A00864 /* GernericConnector.swift */,
 			);
 			name = Shared;
-			sourceTree = "<group>";
-		};
-		01B774A419EFAEE600E2CC2E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				01B774A119EFADB000E2CC2E /* CBCharacteristic+value.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,17 +242,22 @@
 				TargetAttributes = {
 					01B7745119EEC28900E2CC2E = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 7FF77U8NJM;
+						DevelopmentTeam = 4CXX7T9ASM;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					01B7746619EEC28900E2CC2E = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 01B7745119EEC28900E2CC2E;
 					};
 					01B7747E19EFAC3000E2CC2E = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0820;
 					};
 					01B7748D19EFAC3100E2CC2E = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 01B7747E19EFAC3000E2CC2E;
 					};
 				};
@@ -360,9 +288,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B7745D19EEC28900E2CC2E /* Main.storyboard in Resources */,
-				01B7746219EEC28900E2CC2E /* LaunchScreen.xib in Resources */,
-				01B7745F19EEC28900E2CC2E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,15 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E1BA3719FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */,
-				01B7747A19EEC2D800E2CC2E /* NSDataExtensions.swift in Sources */,
 				012829B91A76AC1400BA173E /* HeartRateConnector.swift in Sources */,
-				01B7745A19EEC28900E2CC2E /* ViewController.swift in Sources */,
-				01B7745819EEC28900E2CC2E /* AppDelegate.swift in Sources */,
 				019717EA1A07840E00A00864 /* GernericConnector.swift in Sources */,
 				017256C519FFCA9900FF3CB4 /* HeartRatePeripheral.swift in Sources */,
-				01B774A219EFADB000E2CC2E /* CBCharacteristic+value.swift in Sources */,
-				01B7747919EEC2D800E2CC2E /* CadenceConnector.swift in Sources */,
-				019717E71A07839700A00864 /* SensorButtonConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +332,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B7746E19EEC28900E2CC2E /* Simple_Bike_ComputerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +341,7 @@
 			files = (
 				017256C619FFCAB200FF3CB4 /* HeartRatePeripheral.swift in Sources */,
 				01B7748419EFAC3100E2CC2E /* AppDelegate.swift in Sources */,
-				01B7749C19EFAC3D00E2CC2E /* CadenceConnector.swift in Sources */,
 				01E1BA3819FED51800BA6CF3 /* CBPeripheralManagerExtensions.swift in Sources */,
-				01B7749D19EFAC4100E2CC2E /* NSDataExtensions.swift in Sources */,
-				019717E81A07839700A00864 /* SensorButtonConnector.swift in Sources */,
 				019717EB1A07840E00A00864 /* GernericConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,22 +370,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01B7745B19EEC28900E2CC2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01B7745C19EEC28900E2CC2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		01B7746019EEC28900E2CC2E /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01B7746119EEC28900E2CC2E /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		01B7748719EFAC3100E2CC2E /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -565,11 +464,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4CXX7T9ASM;
 				INFOPLIST_FILE = "Simple Bike Computer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -579,11 +480,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4CXX7T9ASM;
 				INFOPLIST_FILE = "Simple Bike Computer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -602,6 +505,7 @@
 				INFOPLIST_FILE = "Simple Bike ComputerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Bike Computer.app/Simple Bike Computer";
 			};
 			name = Debug;
@@ -617,6 +521,7 @@
 				INFOPLIST_FILE = "Simple Bike ComputerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Bike Computer.app/Simple Bike Computer";
 			};
 			name = Release;
@@ -633,9 +538,10 @@
 				);
 				INFOPLIST_FILE = "Mac Simple Bike Computer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -648,9 +554,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "Mac Simple Bike Computer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -672,6 +579,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Simple Bike Computer.app/Contents/MacOS/Mac Simple Bike Computer";
 			};
 			name = Debug;
@@ -691,6 +599,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Simple Bike Computer.app/Contents/MacOS/Mac Simple Bike Computer";
 			};
 			name = Release;

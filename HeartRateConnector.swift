@@ -11,7 +11,7 @@ import CoreBluetooth
 
 protocol HeartRateDelegate{
     
-    func heartRateDidChange(heartbeat: HeartRateConnector!, heartRate : UInt8! )
+    func heartRateDidChange(_ heartbeat: HeartRateConnector!, heartRate : UInt8! )
 }
 
 class HeartRateConnector : GernericConnector {
@@ -25,13 +25,13 @@ class HeartRateConnector : GernericConnector {
         super.init(services : [HEARTBEAT_SERVICE])
     }
     
-    func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
-        println("didDiscoverServices:error:\(error)")
+    func peripheral(_ peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
+        print("didDiscoverServices:error:\(error)")
         if(error != nil) {
-            for service in peripheral.services {
-                if service.UUID == HEARTBEAT_SERVICE {
-                    peripheral.discoverCharacteristics([HEARTBEAT_SERVICE], forService: service as CBService)
-                    println("discoverCharacteristics")
+            for service in peripheral.services! {
+                if service.uuid == HEARTBEAT_SERVICE {
+                    peripheral.discoverCharacteristics([HEARTBEAT_SERVICE], for: service as CBService)
+                    print("discoverCharacteristics")
                 }
             }
         }
@@ -39,13 +39,13 @@ class HeartRateConnector : GernericConnector {
     
     
     
-    func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
-        println("didDiscoverCharacteristicsForService:\(service) error:\(error)")
+    func peripheral(_ peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
+        print("didDiscoverCharacteristicsForService:\(service) error:\(error)")
         if(error != nil){
-            if service.UUID == HEARTBEAT_SERVICE {
-                for characteristic in service.characteristics{
-                    if (characteristic as CBCharacteristic).UUID == HEARTBEAT_MEASUREMENT {
-                        peripheral.setNotifyValue(true, forCharacteristic: characteristic as CBCharacteristic);
+            if service.uuid == HEARTBEAT_SERVICE {
+                for characteristic in service.characteristics!{
+                    if (characteristic as CBCharacteristic).uuid == HEARTBEAT_MEASUREMENT {
+                        peripheral.setNotifyValue(true, for: characteristic as CBCharacteristic);
                     }
                 }
             }
@@ -53,12 +53,12 @@ class HeartRateConnector : GernericConnector {
     }
     
     
-    func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
-        println("didUpdateValueForCharacteristic:\(characteristic) error:\(error)")
-        if(error != nil && characteristic.UUID == HEARTBEAT_MEASUREMENT){
+    func peripheral(_ peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+        print("didUpdateValueForCharacteristic:\(characteristic) error:\(error)")
+        if(error != nil && characteristic.uuid == HEARTBEAT_MEASUREMENT){
             
             var heartRate : UInt8 = 0
-            characteristic.value().getBytes(&heartRate, range: NSMakeRange(1, 1))
+            (characteristic.value() as NSData).getBytes(&heartRate, range: NSMakeRange(1, 1))
             
             
             delegate?.heartRateDidChange(self, heartRate:heartRate)

@@ -21,45 +21,45 @@ class GernericConnector: NSObject, CBPeripheralDelegate, CBCentralManagerDelegat
         self.central = CBCentralManager(delegate: self, queue: nil)
     }
 
-    func centralManagerDidUpdateState(central: CBCentralManager!){
+    func centralManagerDidUpdateState(_ central: CBCentralManager!){
         switch (central.state){
-        case .PoweredOn:
-            central.scanForPeripheralsWithServices(services, options: nil)
-            println("starting scan for \(services)")
+        case .poweredOn:
+            central.scanForPeripherals(withServices: services, options: nil)
+            print("starting scan for \(services)")
         default:
-            println("not powered on")
+            print("not powered on")
         }
     }
     
-    func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
+    func centralManager(_ central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [AnyHashable: Any]!, RSSI: NSNumber!) {
         
-        println("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
+        print("didDiscoverPeripheral \(peripheral) advertisementData: \(advertisementData)")
         
         if let current = currentPeripheral  {           //can we do this prettier?
-            println("we´re allready connected to \(current)")
+            print("we´re allready connected to \(current)")
         }
         else{
             currentPeripheral = peripheral;
-            central.connectPeripheral(peripheral, options: nil);
+            central.connect(peripheral, options: nil);
         }
     }
     
-    func centralManager(central: CBCentralManager!, didRetrieveConnectedPeripherals peripherals: [AnyObject]!){
-        println("didRetrieveConnectedPeripherals peripherals:\(peripherals)")
+    func centralManager(_ central: CBCentralManager!, didRetrieveConnectedPeripherals peripherals: [AnyObject]!){
+        print("didRetrieveConnectedPeripherals peripherals:\(peripherals)")
     }
     
-    func centralManager(central: CBCentralManager!, didFailToConnectPeripheral peripheral: CBPeripheral!, error: NSError!){
-        println("didFailToConnectPeripheral \(peripheral) error:\(error)")
+    func centralManager(_ central: CBCentralManager!, didFailToConnect peripheral: CBPeripheral!, error: Error!){
+        print("didFailToConnectPeripheral \(peripheral) error:\(error)")
         self.currentPeripheral = nil
     }
     
-    func centralManager(central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: NSError!){
-        println("didDisconnectPeripheral \(peripheral) error:\(error)")
+    func centralManager(_ central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: Error!){
+        print("didDisconnectPeripheral \(peripheral) error:\(error)")
         self.currentPeripheral = nil
     }
     
-    func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!){
-        println("didConnectPeripheral " + peripheral.name)
+    func centralManager(_ central: CBCentralManager!, didConnect peripheral: CBPeripheral!){
+        print("didConnectPeripheral " + peripheral.name!)
         peripheral.delegate = self
         peripheral.discoverServices(services)
     }

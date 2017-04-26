@@ -12,17 +12,17 @@ import CoreBluetooth
 extension CBPeripheralManagerState{
     func asString() -> String {
         switch self{
-        case Unknown:
+        case .unknown:
             return "Unknown"
-        case Resetting:
+        case .resetting:
             return "Unknown"
-        case Unsupported:
+        case .unsupported:
             return "Unsupported"
-        case Unauthorized:
+        case .unauthorized:
             return "Unauthorized"
-        case PoweredOff:
+        case .poweredOff:
             return "PoweredOff"
-        case PoweredOn:
+        case .poweredOn:
             return "PoweredOn"
         }
     }
