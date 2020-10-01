@@ -13,5 +13,4 @@ The goal is to add a simple interface to:
 * show trip average speed
 * show max speed
 
-since btle frameworks are available both on mac and iPhone, this project will try to be as much as multi platform as possible. I know that you propably will not mount your mac on your bike to use it as a bike computer :)
-
+since btle frameworks are available both on Mac and iPhone, this project will try to be as much as multi-platform as possible. I know that you probably will not mount your mac on your bike to use it as a bike computer :)
